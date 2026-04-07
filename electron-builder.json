@@ -1,0 +1,30 @@
+{
+  "appId": "com.smartnote.app",
+  "productName": "SMARTNOTE",
+  "asar": false,
+  "directories": {
+    "buildResources": "public",
+    "output": "dist"
+  },
+  "files": [
+    "electron.js",
+    "package.json",
+    ".next/standalone/**/*",
+    ".next/static/**/*",
+    "public/**/*"
+  ],
+  "win": {
+    "icon": "public/icon.ico",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true
+  }
+}
